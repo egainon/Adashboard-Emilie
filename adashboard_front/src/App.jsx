@@ -6,14 +6,18 @@ import './App.css'
 
 function App() {
 
-const [data, setData]= useState([]);
-// const [themes, setThemes]= useState("");
+const [data, setData]= useState(null);
+
 
 useEffect(() => {
-   const loadData = async () => {
+    const loadData = async () => {
+      try{
     const res = await fetch("http://localhost:3000/themes");
     setData(await res.json());
- } 
+    }catch (error){
+         console.error(error);
+    }
+  } 
  loadData();
 }, []);
 
@@ -29,12 +33,21 @@ useEffect(() => {
           return (
       <div key={theme.id}>
         <h2>{theme.name}</h2>
-        <p>{theme.skills[0].label}</p>
+          <ul>
+          {theme.skills.map((skill) => (
+              <li key={skill.label}>
+               <p>{skill.label}</p>
+              </li>
+            ))}
+          </ul>
         </div>
     )})
     }
+<button></button>
     </>
   )
 }
 
 export default App
+
+
