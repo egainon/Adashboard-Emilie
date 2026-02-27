@@ -50,16 +50,14 @@ Ce projet met en pratique :
 - Communication parent/enfant via props
 
 
-⚙️ Installation
-1️⃣ Cloner le projet
+### ⚙️ Installation
+- 1️⃣ Cloner le projet
 git clone https://github.com/ton-username/nom-du-repo.git
 cd nom-du-repo
-2️⃣ Installer les dépendances
+- 2️⃣ Installer les dépendances
 npm install
-3️⃣ Lancer le front
+- 3️⃣ Lancer le front
 npm run dev
 🔌 Backend requis
 
-Le projet nécessite une API locale accessible à :
-
-http://localhost:3000/themes
+Le projet nécessite une API locale accessible à : http://localhost:3000/themes
